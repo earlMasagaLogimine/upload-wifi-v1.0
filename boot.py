@@ -8,7 +8,7 @@ from neopixel import NeoPixel
 pin = Pin(48, Pin.OUT)
 pixel = NeoPixel(pin, 1)
 
-pixel[0] = (255,0,0)
+pixel[0] = (0,255,0)
 pixel.write()
 
 ugit.pull_all()
