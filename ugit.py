@@ -29,7 +29,7 @@ user = 'earlMasagaLogimine'
 repository = 'upload-wifi-v1.0'
 token = ''
 # Change this variable to 'master' or any other name matching your default branch
-default_branch = 'main'
+#default_branch = 'main'
 
 # Don't remove ugit.py from the ignore_files unless you know what you are doing :D
 # Put the files you don't want deleted or updated here use '/filename.ext'
@@ -40,7 +40,7 @@ ignore = ignore_files
 # Static URLS
 # GitHub uses 'main' instead of master for python repository trees
 giturl = 'https://github.com/{user}/{repository}'
-call_trees_url = f'https://api.github.com/repos/{user}/{repository}/git/trees/{default_branch}?recursive=1'
+call_trees_url = f'https://api.github.com/repos/{user}/{repository}/git/trees/main?recursive=1'
 raw = f'https://raw.githubusercontent.com/{user}/{repository}/master/'
 
 def pull(f_path,raw_url):
@@ -179,7 +179,7 @@ def pull_git_tree(tree_url=call_trees_url,raw = raw):
   data = json.loads(r.content.decode('utf-8'))
   if 'tree' not in data:
       print('\nDefault branch "main" not found. Set "default_branch" variable to your default branch.\n')
-      raise Exception(f'Default branch {default_branch} not found.') 
+      raise Exception(f'Default branch main not found.') 
   tree = json.loads(r.content.decode('utf-8'))
   return(tree)
   
