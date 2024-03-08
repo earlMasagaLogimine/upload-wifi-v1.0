@@ -13,6 +13,7 @@ import binascii
 import machine
 import time
 import network
+import gc
 
 global internal_tree
 
@@ -103,6 +104,7 @@ def pull_all(tree=call_trees_url,raw = raw,ignore = ignore,isconnected=False):
   time.sleep(2)
   print('resetting machine in 10: machine.reset()')
   machine.reset()
+  gc.collect()
   #return check instead return with global
 
 def wificonnect(ssid=ssid,password=password):
