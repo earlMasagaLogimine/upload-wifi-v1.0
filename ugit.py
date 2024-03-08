@@ -100,7 +100,7 @@ def pull_all(tree=call_trees_url,raw = raw,ignore = ignore,isconnected=False):
   logfile = open('ugit_log.py','w')
   logfile.write(str(log))
   logfile.close()
-  time.sleep(10)
+  time.sleep(2)
   print('resetting machine in 10: machine.reset()')
   machine.reset()
   #return check instead return with global
