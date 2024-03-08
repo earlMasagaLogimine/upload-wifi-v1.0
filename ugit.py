@@ -25,7 +25,7 @@ password = "Horizon2018"
 # CHANGE TO YOUR REPOSITORY INFO
 # Repository must be public if no personal access token is supplied
 user = 'earlMasagaLogimine'
-repository = 'ugit_test'
+repository = 'upload-wifi-v1.0'
 token = ''
 # Change this variable to 'master' or any other name matching your default branch
 default_branch = 'main'
